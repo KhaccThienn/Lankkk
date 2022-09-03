@@ -1,0 +1,39 @@
+<div class="all">
+  <div class="bg">
+    <div class="container p-5" ng-controller="registerController">
+      <div class="login_header h2 text-center">
+        Register
+      </div>
+      <form name="myForm" ng-submit="register(name, email, pass, PASS)">
+        <div class="form-group">
+          <label for="Name" class="font-weight-bold">Username: </label>
+          <input type="text" name="" id="Name" class="form-control" placeholder="Username..." ng-model="name"
+            aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="to" class="font-weight-bold">Email: </label>
+          <input class="form-control" id="to" name="To" ng-required="true" ng-pattern="emails.EMAIL_FORMAT"
+            placeholder="{{emails.EMAIL_FORMAT_HELP}}" ng-model="email" />
+          <small class="text-danger" ng-show="myForm.To.$error.pattern">Invalid Email</small>
+        </div>
+        <div class="form-group">
+          <label class="font-weight-bold" for="pass">Password:</label>
+          <input type="password" class="form-control" ng-model="pass" id="pass" placeholder="Password..." />
+        </div>
+        <div class="form-group">
+          <label for="PASS" class="font-weight-bold">Confirm Password:</label>
+          <input type="password" id="PASS" class="form-control" ng-model="PASS" placeholder="Confirm Password..."
+            ng-change="match()" /><br />
+          <p ng-show="isMatch" style="color:green">
+            Password matched
+          </p>
+          <p ng-hide="isMatch || PASS==null" style="color:red">
+            Password does not match
+          </p>
+        </div>
+        <button type="submit" name="" id="" class="nkt20">Register...</button>
+      </form>
+      <p>If you have an account ? <a href="#!login" class="text-decoration-none text-success">Back To Login</a></p>
+    </div>
+  </div>
+</div>

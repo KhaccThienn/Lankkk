@@ -1,0 +1,13 @@
+<form name="emailModal" ng-controller="testController">
+  <div class="form-group row mb-3">
+    <label for="to" class="col-sm-2 text-right col-form-label">
+      <span class="form-required">*</span>
+      To
+    </label>
+    <div class="col-sm-9">
+      <input class="form-control" id="to" name="To" ng-required="true" ng-pattern="email.EMAIL_FORMAT"
+        placeholder="{{email.EMAIL_FORMAT_HELP}}" ng-model="mail.to" />
+      <small class="text-muted" ng-show="emailModal.To.$error.pattern">wrong</small>
+    </div>
+  </div>
+</form>

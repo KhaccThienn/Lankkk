@@ -1,0 +1,43 @@
+<div class="container" ng-controller="cartCtrl">
+  <div class="h2 text-center">
+    Cart
+  </div>
+  <table class="table mt-4 mb-4">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Product's Name</th>
+        <th scope="col">Product's Rated By User</th>
+        <th scope="col">Product's Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr ng-repeat="item in carts">
+        <td><img src="{{item.cart.item.image}}" alt="" width='50' /></td>
+        <td>
+          <a href="#!detail/{{item.cart.item.id}}" class="text-decoration-none text-dark">
+            {{item.cart.item.name}}
+          </a>
+        </td>
+        <td>
+          {{item.cart.rated ? item.cart.rated  :  0 }} <i class="fa fa-star" aria-hidden="true"></i>
+        </td>
+        <td>{{item.cart.item.price}} <sup>vnd</sup></td>
+        <td>{{item.cart.qty}}</td>
+        <td>{{item.cart.item.price * item.cart.qty}} <sup>vnd</sup></td>
+        <td>
+          <i class="fa fa-trash" ng-click="handleAction(item.cart.item.id)" aria-hidden="true"></i>
+        </td>
+
+      </tr>
+      <tr class="text-center">
+        <td colspan="5">Total: </td>
+        <td colspan="2">{{total}} vnd</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

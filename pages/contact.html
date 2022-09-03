@@ -1,0 +1,65 @@
+<div class="banner">
+  <img src="https://demo.web3canvas.com/themeforest/tomato/img/header/1.jpg" alt="" class="card-img">
+  <h1 class="contact text-center">contact</h1>
+</div>
+<div class="p-5 container" ng-controller="contactCtrl">
+
+  <div class="row align-items-center justify-content-between">
+    <div class="col-lg-6">
+      <div class="address">
+        <h2>address</h2>
+        <ul>
+          <li><a href=""><i class="fa-solid fa-location-dot"></i><span>28 Seventh Avenue, Neew York,
+                10014</span></a></li>
+          <li><a href=""><i class="fa-solid fa-phone"></i><span>Phone: (415) 124-5678</span></a></li>
+          <li><a href=""><i class="fa-solid fa-envelope"></i><span>support@restaurant.com</span></a></li>
+        </ul>
+      </div>
+      <div class="hour">
+        <h2>working hours</h2>
+        <div class="pl">
+          <p>10:00 am to 11:00 pm on Weekdays</p>
+          <p>11:00 am to 11:30 pm on Weekends</p>
+        </div>
+      </div>
+      <div class="follow w-50">
+        <h2>follow us</h2>
+        <ul class="d-flex justify-content-between ">
+          <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+          <li><a href=""><i class="fa-brands fa-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <form name="myForm" ng-submit="submit(name, email, subject, mess)">
+        <div class="form-group">
+          <label for="Name" class="font-weight-bold">Your Name ?</label>
+          <input type="text" name="" id="Name" class="form-control" placeholder="Name..." ng-model="name"
+            aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="Mail" class="font-weight-bold">Your Email</label>
+          <input class="form-control" id="to" name="To" ng-required="true" ng-pattern="emails.EMAIL_FORMAT"
+            placeholder="{{emails.EMAIL_FORMAT_HELP}}" ng-model="email" />
+          <small class="text-danger" ng-show="myForm.To.$error.pattern">Invalid Email</small>
+
+        </div>
+        <div class="form-group">
+          <label for="sub" class="font-weight-bold">Subject ?</label>
+          <input type="text" name="" id="sub" class="form-control" placeholder="Subject..." ng-model="subject"
+            aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="mess" class="font-weight-bold">Message ?</label>
+          <textarea type="text" name="" id="mess" class="form-control" placeholder="Message..." ng-model="mess"
+            aria-describedby="helpId"></textarea>
+        </div>
+        <button type="submit" name="" id="" class="btn btn-outline-dark btn-block">Submit</button>
+      </form>
+    </div>
+
+  </div>
+</div>

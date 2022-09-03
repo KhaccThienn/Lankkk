@@ -1,0 +1,16 @@
+<div class="container p-5">
+  <p class="text-center h2" ng-if="result">ALL RESULT OF: {{result}}</p>
+  <div class="row">
+    <div class="col-lg-3 mt-5 p-0" ng-repeat="item in results">
+      <div class="card" style="width: 16rem;">
+        <img class="card-img-top" src="{{item.image}}" alt="Card image cap">
+        <div class="card-body pro-text">
+          <p class="card-text text-truncate">{{item.name}}</p>
+          <p class="price">{{item.price / 22300 | number:3}}$</p>
+          <a href="#!detail/{{item.id}}" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>

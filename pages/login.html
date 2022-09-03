@@ -1,0 +1,28 @@
+<div class="all">
+  <div class="container containerForm p-5" ng-controller="loginController">
+    <div class="login_header h2 text-center text-light">
+      Login
+    </div>
+    <div class="login_main">
+
+
+      <form name="myForm" ng-submit="login(name, pass)">
+        <div class="form-group">
+          <label for="Name" class="font-weight-bold">Username: </label>
+          <input type="text" name="" id="Name" class="form-control" placeholder="Username..." ng-model="name"
+            aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+          <label for="pass" class="font-weight-bold">Password: </label>
+          <input type="password" name="" id="pass" class="form-control" placeholder="Password..." ng-model="pass"
+            aria-describedby="helpId">
+        </div>
+        <button type="submit" name="" id="" class="nkt20">Login...</button>
+      </form>
+      <p class="text-white">If you don't have an account ? <a href="#!register" class="text-decoration-none text-success">Register Here</a>
+      </p>
+
+    </div>
+  </div>
+
+</div>

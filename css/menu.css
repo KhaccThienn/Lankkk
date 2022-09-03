@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+.contact {
+  /* position: absolute; */
+  /* top: 30%;
+    left: 36%; */
+  padding: 100px;
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lorem {
+  letter-spacing: 0.3rem;
+  text-transform: none !important;
+}
+
+.header {
+  font-size: 50px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.low {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.img {
+  width: 10% !important;
+}
+
+.img-low {
+  margin-bottom: 10px !important;
+  width: 30% !important;
+}
+
+.font-times {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.font-times-1 {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.font-time {
+  font-size: 17px !important;
+}
+
+.it {
+  font-size: 25px !important;
+}
+
+.menucake {
+  background-color: black;
+}
+
+.conen {
+  color: beige;
+}
+
+.cakes {
+  font-size: 50px;
+}
+
+.text {
+  font-size: 50px;
+}
+
+.banner {
+  background-clip: border-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://cakeryshop3.bolvo.com/test2/wp-content/uploads/sites/3/2019/11/a.jpg');
+  /* position: relative; */
+}
+
+.contact {
+  /* position: absolute; */
+  /* top: 30%;
+    left: 36%; */
+  padding: 100px;
+  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lorem {
+  letter-spacing: 0.3rem;
+  text-transform: none !important;
+}
+
+.header {
+  font-size: 50px;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.low {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.img {
+  width: 10% !important;
+}
+
+.img-low {
+  margin-bottom: 10px !important;
+  width: 30%;
+}
+
+.font-times {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.font-times-1 {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.font-time {
+  font-size: 17px !important;
+}
+
+.it {
+  font-size: 25px !important;
+}

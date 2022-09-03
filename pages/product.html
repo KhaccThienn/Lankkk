@@ -1,0 +1,73 @@
+<main>
+  <div class="breadcrumb_background margin-bottom-40">
+    <div class="title_full">
+      <div class="container a-center">
+        <p class="title_page">All Products</p>
+      </div>
+    </div>
+    <section class="bread-crumb">
+      <span class="crumb-border"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 a-center breadcrumb-bg ">
+            <ul class="breadcrumb container text-center m-auto d-inline-block">
+              <li class="home">
+                <a href="/"><span>Home</span></a>
+                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+              </li>
+              <li><strong><span>All Products</span></strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="navbar container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a routerLink="/products" class="nav-link dropdown-toggle pr-4" href="#" id="navbarDropdown" role="button"
+              data-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <!-- <a class="dropdown-item cursor" *ngFor="let item of listCate"
+								(click)="filter_pro(item.id)">{{item.cate_name}}</a> -->
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3" *ngFor="let item of list">
+          <div class="card cur mt-5" routerLink="/detail/{{item.id}}">
+            <img class="card-img-top" width="300px" height="200px" src="{{item.image}}" alt="">
+            <div class="card-body bg-light">
+              <h4 class="card-title text-center prod_name">{{item.prod_name}}</h4>
+              <div class="prices d-flex text-center justify-content-around">
+                <p class="product-price">
+                  {{item.price}} $
+                </p>
+              </div>
+              <div class="icon text-center">
+                <i routerLink="/" class="fa-solid cur fa-heart pr-4"></i>
+                <i routerLink="/" class="fa-solid cur fa-basket-shopping pr-4"></i>
+                <i routerLink="/detail/{{item.id}}" class="fa-solid cur fa-search "></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

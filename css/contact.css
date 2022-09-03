@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
+
+.banner {
+  position: relative;
+}
+
+.contact {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.address h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.address ul li {
+  list-style: none;
+  padding: 7px 0px;
+}
+
+.address ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.address i {
+  margin-right: 15px;
+  color: #f9c56a;
+}
+
+.hour h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.follow h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.follow ul li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.follow ul li a {
+  text-decoration: none;
+}
+
+.follow i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+
+.form button {
+  background-color: #f9c56a;
+  color: black;
+  width: 100%;
+  padding: 10px;
+}
+
+.pl {
+  padding-left: 40px !important;
+}
+
+.map {
+  width: 100%;
+}

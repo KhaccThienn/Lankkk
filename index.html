@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- The ng-app="" directive is used to help AngularJS mark where the application should start in HTML. -->
+<html lang="en" ng-app="myApp">
+
+<head>
+  <title>Bakerz Bite</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="icon" href="Assets/pngegg.png"> -->
+  <link rel="stylesheet" href="plugins/bs4/css/bootstrap.min.css">
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="plugins/bs4/css/fontawesome.min.css">
+  <link rel="stylesheet" href="plugins/bs4/css/fontawesome6.min.css">
+  <!-- OwlCarousel2 CSS -->
+  <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+  <!-- Default CSS -->
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/login.css">
+  <!-- <link rel="stylesheet" href="css/register.css"> -->
+  <link rel="stylesheet" href="css/faq.css">
+  <!-- Angular JS Module -->
+  <script src="plugins/angular/angular.min.js"></script>
+  <script src="plugins/angular/angular-route.js"></script>
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="appCtrl">
+  <!-- Header component, includes by ng-include -->
+  <div ng-include="'header.html'"></div>
+  <!-- Views component, includes by ng-view -->
+  <div ng-view></div>
+  <!-- Footer component, includes by ng-include -->
+  <div ng-include="'footer.html'"></div>
+  <div class="text-right fixed-bottom" ng-controller="appCtrl as mainController">
+    <div class="d-inline showtime text-light p-2" style="border-radius: 10px;">
+      {{mainController.date | date:"HH:mm:ss" }},
+      {{mainController.date | date:"EEEE dd/MM/yyyy" }},
+      GMT: {{mainController.date | date:"Z" }}
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then OwlCarousel2.js , then Popper.js, then Bootstrap JS -->
+  <script src="plugins/bs4/js/jquery.min.js"></script>
+  <script src="plugins/bs4/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="plugins/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="plugins/bs4/js/popper.min.js"></script>
+  <script src="plugins/bs4/js/bootstrap.min.js"></script>
+  <script src="plugins/bs4/js/420a189669.js"></script>
+  <script src="plugins/bs4/js/bootstrap520.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
