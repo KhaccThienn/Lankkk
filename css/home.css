@@ -3,16 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
-.showtime{
-  background-color: #ebebeb !important;
-  color: #000 !important;
-}
 
 .bg {
   background-image: url("http://mauweb.monamedia.net/monacake/wp-content/uploads/2018/06/bg-1.jpg?gidzl=DzMtUvZspWGyphHyb-Z91ppDkd2FkC1Q9vc_88ZjabvnpUWetht5172Tw7sBl99H8ioyAJYT5ajEcVVD3G") !important;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .bg-spe {
@@ -285,10 +280,10 @@ input:checked+.slide-container .nav label {
   }
 }
 
-.card:nth-child(2) {
+/* .card:nth-child(2) {
   margin: 20px 0px;
   padding: 50px 20px;
-}
+} */
 
 @media (max-width: 768px) {
   .card:nth-child(2) {
@@ -300,9 +295,9 @@ input:checked+.slide-container .nav label {
   font-size: 25px;
 }
 
-.card .icon {
-  /* margin: 50px 0;   */
-}
+/* .card .icon {
+  margin: 50px 0;  
+} */
 
 .card .features ul {
   padding: 0;
@@ -392,9 +387,9 @@ input:checked+.slide-container .nav label {
   font-size: 25px;
 }
 
-.card .icon {
-  /* margin: 50px 0;   */
-}
+/* .card .icon {
+  margin: 50px 0;  
+} */
 
 .card .features ul {
   padding: 0;

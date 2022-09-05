@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="css/product.css">
+
 <main>
   <div class="breadcrumb_background margin-bottom-40">
     <div class="title_full">
@@ -12,7 +14,7 @@
           <div class="col-xs-12 a-center breadcrumb-bg ">
             <ul class="breadcrumb container text-center m-auto d-inline-block">
               <li class="home">
-                <a href="/"><span>Home</span></a>
+                <a href="#!/"><span>Home</span></a>
                 <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
               </li>
               <li><strong><span>All Products</span></strong></li>
@@ -22,34 +24,37 @@
       </div>
     </section>
   </div>
-  <div class="navbar container">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a routerLink="/products" class="nav-link dropdown-toggle pr-4" href="#" id="navbarDropdown" role="button"
-              data-toggle="dropdown" aria-expanded="false">
-              Products
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <!-- <a class="dropdown-item cursor" *ngFor="let item of listCate"
-								(click)="filter_pro(item.id)">{{item.cate_name}}</a> -->
-            </div>
-          </li>
 
-        </ul>
+  <div class="filter container">
+    <section class="filter-section pt-0">
+      <h3>Price</h3>
+      <form method="get" name="price-filters">
+        <div class="price-slider">
+          <div id="price-range" ya-no-ui-slider="price_slider"></div>
+          <div class="values group mb-2">
+            <!--data-min-val represent minimal price and data-max-val maximum price respectively in pricing slider range; value="" - default values-->
+            <label for="minVal" class="labels">Min Price: </label>
+            <input class="form-control" name="minVal" id="minVal" type="text" ng-model="price_slider.start[0]">
+            <label for="maxVal" class="labels">Max Price: </label>
+            <input class="form-control" name="maxVal" id="maxVal" type="text" ng-model="price_slider.start[1]">
+          </div>
+          <span ng-click="price_slider.start = [0, 30]" class="clear btn btn-outline-dark" id="clearPrice">Clear</span>
+          <input class="btn btn-outline-dark" type="submit" ng-click="priceFiltering()" value="Filter">
+        </div>
+      </form>
+    </section>
+    <section class="mt-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <button ng-repeat="item in cates" class="btn btn-outline-dark btn-block btn-cus" type="button" ng-click="manuFiltering(item.id)">{{item.cate_name}}</button>
       </div>
-    </nav>
+    </section>
+    <!-- <button class="btn btn-outline-dark" ng-click="clearAll()">Clear Filter</button> -->
   </div>
 
   <div class="content">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3" *ngFor="let item of list">
+        <div class="col-lg-3" ng-repeat="item in products | filter:pricefilter | filter:profilter | filter:clearfilter | orderBy:propertyName:reverse">
           <div class="card cur mt-5" routerLink="/detail/{{item.id}}">
             <img class="card-img-top" width="300px" height="200px" src="{{item.image}}" alt="">
             <div class="card-body bg-light">
@@ -60,9 +65,8 @@
                 </p>
               </div>
               <div class="icon text-center">
-                <i routerLink="/" class="fa-solid cur fa-heart pr-4"></i>
-                <i routerLink="/" class="fa-solid cur fa-basket-shopping pr-4"></i>
-                <i routerLink="/detail/{{item.id}}" class="fa-solid cur fa-search "></i>
+                <a href="#!/cart" title="View Cart" class="fa-solid cur fa-basket-shopping pr-4"></a>
+                <a href="#!/detail/{{item.id}}" title="View Details" class="fa-solid cur fa-search"></a>
               </div>
             </div>
           </div>

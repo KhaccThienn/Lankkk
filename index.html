@@ -30,16 +30,6 @@
   <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
   <!-- Default CSS -->
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/about.css">
-  <link rel="stylesheet" href="css/product.css">
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/login.css">
-  <!-- <link rel="stylesheet" href="css/register.css"> -->
-  <link rel="stylesheet" href="css/faq.css">
   <!-- Angular JS Module -->
   <script src="plugins/angular/angular.min.js"></script>
   <script src="plugins/angular/angular-route.js"></script>
@@ -55,7 +45,7 @@
   <!-- Footer component, includes by ng-include -->
   <div ng-include="'footer.html'"></div>
   <div class="text-right fixed-bottom" ng-controller="appCtrl as mainController">
-    <div class="d-inline showtime text-light p-2" style="border-radius: 10px;">
+    <div class="d-inline text-light p-2" style="border-radius: 10px; background-color: #ebebeb !important; color: #000 !important;">
       {{mainController.date | date:"HH:mm:ss" }},
       {{mainController.date | date:"EEEE dd/MM/yyyy" }},
       GMT: {{mainController.date | date:"Z" }}

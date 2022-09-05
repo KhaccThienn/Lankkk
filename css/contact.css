@@ -5,9 +5,10 @@
 }
 
 .contact {
+  font-family: "Cormorant";
   position: absolute;
-  top: 30%;
-  left: 40%;
+  top: 40%;
+  left: 45%;
   color: white;
   font-weight: bold;
   text-transform: uppercase;

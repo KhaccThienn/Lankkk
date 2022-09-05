@@ -11,16 +11,14 @@ app.controller("appCtrl", function ($scope, $http, $location, $interval) {
     { number: 2 },
     { number: 3 },
     { number: 4 },
-    { number: 5 }
+    { number: 5 },
   ];
   // Getting data from JSON file, using $http service
   $http
     .get("data.json")
     .then((response) => {
-      $scope.products = response.data.product;
+      $scope.products = response.data.products;
       $scope.cates = response.data.category;
-      $scope.manufacturals = response.data.manufactural;
-      console.log(response.data.category);
     })
     .catch((error) => {
       console.log(error);
@@ -47,7 +45,7 @@ app.controller("appCtrl", function ($scope, $http, $location, $interval) {
 
   // Filter Services
   $scope.price_slider = {
-    start: [0, 90000000],
+    start: [0, 30],
   };
 
   $scope.priceFiltering = function () {
@@ -63,28 +61,16 @@ app.controller("appCtrl", function ($scope, $http, $location, $interval) {
     };
   };
 
-  $scope.ton_slider = {
-    start: [9000, 50000],
-  };
-
-  $scope.tonFiltering = function () {
-    $scope.minTon = $scope.ton_slider.start[0];
-    $scope.maxTon = $scope.ton_slider.start[1];
-    $scope.tonfilter = function (product) {
-      console.log(product.Cooling_capacity);
-      if (
-        product.Cooling_capacity <= $scope.maxTon &&
-        product.Cooling_capacity >= $scope.minTon
-      ) {
-        return product;
-      }
-    };
-  };
+  // $scope.clearAll = function () {
+  //   $scope.clearfilter = function (product) {
+  //     console.log(product)
+  //   };
+  // };
 
   $scope.manuFiltering = function (id) {
     $scope.manuUid = id;
     $scope.profilter = function (product) {
-      if (product.manuId == $scope.manuUid) {
+      if (product.prod_id == $scope.manuUid) {
         return product;
       }
     };
@@ -101,7 +87,7 @@ app.controller(
     $http
       .get("data.json")
       .then((response) => {
-        $scope.products = response.data.product;
+        $scope.products = response.data.products;
       })
       .catch((error) => {
         console.log(error);
@@ -123,10 +109,10 @@ app.controller(
       return $scope.qty;
     };
 
-    $scope.addToCart = function (item, qty, rated) {
+    $scope.addToCart = function (item, qty) {
       $scope.carts = JSON.parse(localStorage.getItem("cart") || "[]");
       $scope.data = {
-        cart: { item, qty, rated },
+        cart: { item, qty },
       };
       $scope.carts.push($scope.data);
       localStorage.setItem("cart", JSON.stringify($scope.carts));
@@ -262,8 +248,8 @@ app.controller("cartCtrl", function ($scope) {
 
   $scope.total = 0;
   $scope.carts.forEach((items) => {
-    $scope.total += (items.cart.item.price * items.cart.qty);
-  })
+    $scope.total += items.cart.item.price * items.cart.qty;
+  });
 });
 
 // Test

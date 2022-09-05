@@ -1,13 +1,34 @@
+<link rel="stylesheet" href="css/cart.css">
+
 <div class="container" ng-controller="cartCtrl">
-  <div class="h2 text-center">
-    Cart
+  <div class="breadcrumb_background margin-bottom-40">
+    <div class="title_full">
+      <div class="container a-center">
+        <p class="title_page">Carts</p>
+      </div>
+    </div>
+    <section class="bread-crumb">
+      <span class="crumb-border"></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 a-center breadcrumb-bg ">
+            <ul class="breadcrumb container text-center m-auto d-inline-block">
+              <li class="home">
+                <a href="#!/products"><span>Products</span></a>
+                <span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
+              </li>
+              <li><strong><span>Cart</span></strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
   <table class="table mt-4 mb-4">
     <thead>
       <tr>
         <th scope="col">Image</th>
         <th scope="col">Product's Name</th>
-        <th scope="col">Product's Rated By User</th>
         <th scope="col">Product's Price</th>
         <th scope="col">Quantity</th>
         <th scope="col">Total</th>
@@ -20,23 +41,20 @@
         <td><img src="{{item.cart.item.image}}" alt="" width='50' /></td>
         <td>
           <a href="#!detail/{{item.cart.item.id}}" class="text-decoration-none text-dark">
-            {{item.cart.item.name}}
+            {{item.cart.item.prod_name}}
           </a>
         </td>
-        <td>
-          {{item.cart.rated ? item.cart.rated  :  0 }} <i class="fa fa-star" aria-hidden="true"></i>
-        </td>
-        <td>{{item.cart.item.price}} <sup>vnd</sup></td>
+        <td>{{item.cart.item.price}} <sup>$</sup></td>
         <td>{{item.cart.qty}}</td>
-        <td>{{item.cart.item.price * item.cart.qty}} <sup>vnd</sup></td>
+        <td>{{item.cart.item.price * item.cart.qty}} <sup>$</sup></td>
         <td>
           <i class="fa fa-trash" ng-click="handleAction(item.cart.item.id)" aria-hidden="true"></i>
         </td>
 
       </tr>
       <tr class="text-center">
-        <td colspan="5">Total: </td>
-        <td colspan="2">{{total}} vnd</td>
+        <td colspan="4">Total: </td>
+        <td colspan="1" class="text-center h3">{{total}} $</td>
       </tr>
     </tbody>
   </table>
